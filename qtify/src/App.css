@@ -2,3 +2,7 @@
   --color-primary: #34c94b;
   --color-black: black;
 }
+
+.App {
+  background-color: black;
+}

@@ -1,0 +1,42 @@
+.card {
+  width: 159px;
+  height: 232px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0; /* No border radius for the outer card */
+  overflow: hidden;
+}
+
+.topSection {
+  height: 205px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.chipSection {
+  height: 20%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.bottomText {
+  height: 10%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 14px;
+  padding: 4px;
+  margin-left: 6px;
+}
