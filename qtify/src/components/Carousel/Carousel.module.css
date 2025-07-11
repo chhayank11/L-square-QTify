@@ -1,0 +1,28 @@
+.carousel {
+  position: relative;
+}
+.carousel-button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 222;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  /* top: 50%; */
+  top: 104px;
+  /* transform: translate(0, -100%); */
+}
+.prev-button {
+  left: 1rem;
+  transform: translate(-50%, -50%);
+}
+.next-button {
+  right: 1rem;
+  transform: translate(50%, -50%);
+}

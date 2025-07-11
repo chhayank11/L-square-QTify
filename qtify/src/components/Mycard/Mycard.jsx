@@ -15,11 +15,11 @@ function Mycard({ card }) {
                   fontFamily: "Poppins",
                   fontWeight: 400,
                   fontStyle: "normal",
-                  fontSize: "10px",
+                  fontSize: "11px",
                   color: "white",
                 }}
               >
-                100 Follows
+                {Number(card.follows / 1000).toFixed(1)}k Follows
               </Typography>
             }
             sx={{

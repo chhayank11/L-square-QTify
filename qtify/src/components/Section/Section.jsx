@@ -2,13 +2,14 @@ import { useState } from "react";
 import styles from "./Section.module.css";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Mycard from "../Mycard/Mycard";
+import Carousel from "../Carousel/Carousel";
 
-function Section({ data }) {
-  const [isButtonCollapsed, setIsButtonCollapsed] = useState(true);
+function Section({ data, heading }) {
+  const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
 
   function showGrid() {
     return (
-      <Grid container spacing={3}>
+      <Grid container spacing={5}>
         {data.map((item) => (
           <Grid item key={item.id}>
             <Mycard card={item} />
@@ -18,7 +19,7 @@ function Section({ data }) {
     );
   }
   function showCarousel() {
-    return <></>;
+    return <Carousel data={data}></Carousel>;
   }
   return (
     <Box sx={{ mx: 4 }}>
@@ -33,7 +34,7 @@ function Section({ data }) {
             letterSpacing: "0px",
           }}
         >
-          Top Albums
+          {heading}
         </Typography>
         <Button
           sx={{ color: "#34c94b" }}
