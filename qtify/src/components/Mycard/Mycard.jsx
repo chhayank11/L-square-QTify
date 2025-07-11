@@ -36,7 +36,7 @@ function Mycard({ card }) {
 
       {/* Bottom Text */}
       <div className={styles.bottomText}>
-        <Typography variant="body2">This is bottom text</Typography>
+        <Typography variant="body2">{card.title}</Typography>
       </div>
     </div>
   );
