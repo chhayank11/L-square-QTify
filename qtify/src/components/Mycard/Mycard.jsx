@@ -1,7 +1,7 @@
 import { Chip, Typography } from "@mui/material";
 import styles from "./Mycard.module.css";
 
-function Mycard({ card }) {
+function Mycard({ card, type }) {
   return (
     <div className={styles.card}>
       {/* Top Section (Image + Chip) */}
@@ -19,7 +19,11 @@ function Mycard({ card }) {
                   color: "white",
                 }}
               >
-                {Number(card.follows / 1000).toFixed(1)}k Follows
+                {type === "album"
+                  ? `${Number(card.follows / 1000).toFixed(1)}k Follows`
+                  : `${Number(card.likes / 1000).toFixed(1)}k Likes`}
+
+                {/* {Number(card.follows / 1000).toFixed(1)}k Follows */}
               </Typography>
             }
             sx={{

@@ -12,7 +12,7 @@ import styles from "./Carousel.module.css";
 import CarouselBack from "./CarouselBack";
 import CarouselNext from "./CarouselNext";
 
-function Carousel({ data }) {
+function Carousel({ data, type }) {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   const handleNext = () => {
@@ -53,7 +53,7 @@ function Carousel({ data }) {
               maxWidth: "159px",
             }}
           >
-            <Mycard card={item}></Mycard>
+            <Mycard card={item} type={type}></Mycard>
           </SwiperSlide>
         );
       })}
